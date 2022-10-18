@@ -24,8 +24,8 @@ class SimpleTableViewController: UITableViewController {
         
         let cell = UITableViewCell()
         var content = cell.defaultContentConfiguration()
-        content.text = list[indexPath.row]
-        content.secondaryText = "안녕하세요"
+        content.text = list[indexPath.row] //textLabel
+        content.secondaryText = "안녕하세요" //detailTextLabel
         
         cell.contentConfiguration = content
         

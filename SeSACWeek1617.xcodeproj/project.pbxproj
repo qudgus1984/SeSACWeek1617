@@ -13,6 +13,7 @@
 		2FF4946A28FE2DB500FD6D9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF4946828FE2DB500FD6D9E /* Main.storyboard */; };
 		2FF4946C28FE2DB600FD6D9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF4946B28FE2DB600FD6D9E /* Assets.xcassets */; };
 		2FF4946F28FE2DB600FD6D9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF4946D28FE2DB600FD6D9E /* LaunchScreen.storyboard */; };
+		2FF4947728FE391000FD6D9E /* SimpleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4947628FE391000FD6D9E /* SimpleCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2FF4946B28FE2DB600FD6D9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FF4946E28FE2DB600FD6D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FF4947028FE2DB600FD6D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FF4947628FE391000FD6D9E /* SimpleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				2FF4946B28FE2DB600FD6D9E /* Assets.xcassets */,
 				2FF4946D28FE2DB600FD6D9E /* LaunchScreen.storyboard */,
 				2FF4947028FE2DB600FD6D9E /* Info.plist */,
+				2FF4947628FE391000FD6D9E /* SimpleCollectionViewController.swift */,
 			);
 			path = SeSACWeek1617;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF4947728FE391000FD6D9E /* SimpleCollectionViewController.swift in Sources */,
 				2FF4946728FE2DB500FD6D9E /* SimpleTableViewController.swift in Sources */,
 				2FF4946328FE2DB500FD6D9E /* AppDelegate.swift in Sources */,
 				2FF4946528FE2DB500FD6D9E /* SceneDelegate.swift in Sources */,
