@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F00ABA128FF906B00085771 /* DiffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00ABA028FF906B00085771 /* DiffableCollectionViewController.swift */; };
 		2FF4946328FE2DB500FD6D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */; };
 		2FF4946528FE2DB500FD6D9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */; };
 		2FF4946728FE2DB500FD6D9E /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946628FE2DB500FD6D9E /* SimpleTableViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F00ABA028FF906B00085771 /* DiffableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableCollectionViewController.swift; sourceTree = "<group>"; };
 		2FF4945F28FE2DB500FD6D9E /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */,
 				2FF4946628FE2DB500FD6D9E /* SimpleTableViewController.swift */,
 				2FF4946828FE2DB500FD6D9E /* Main.storyboard */,
+				2F00ABA028FF906B00085771 /* DiffableCollectionViewController.swift */,
 				2FF4946B28FE2DB600FD6D9E /* Assets.xcassets */,
 				2FF4946D28FE2DB600FD6D9E /* LaunchScreen.storyboard */,
 				2FF4947028FE2DB600FD6D9E /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F00ABA128FF906B00085771 /* DiffableCollectionViewController.swift in Sources */,
 				2FF4947728FE391000FD6D9E /* SimpleCollectionViewController.swift in Sources */,
 				2FF4946728FE2DB500FD6D9E /* SimpleTableViewController.swift in Sources */,
 				2FF4946328FE2DB500FD6D9E /* AppDelegate.swift in Sources */,

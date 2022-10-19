@@ -7,7 +7,8 @@
 
 import UIKit
 
-struct User {
+struct User: Hashable {
+    let id = UUID().uuidString
     let name: String
     let age: Int
     
@@ -19,12 +20,11 @@ struct User {
 
 class SimpleCollectionViewController: UICollectionViewController {
     
-
     //var list = ["닭곰탕", "삼계탕", "들기름김", "삼분카레", "콘소메 치킨"]
     
     var list = [
-        User(name: "뽀로로", age: 11),
-        User(name: "에디", age: 2),
+        User(name: "뽀로로", age: 2),
+        User(name: "뽀로로", age: 2),
         User(name: "루비", age: 13),
         User(name: "엘리어스", age: 7)
     ]
@@ -32,27 +32,24 @@ class SimpleCollectionViewController: UICollectionViewController {
     //cellForItemAt 전에 생성되어야 함. => register 코드와 유사한 역할
     var cellRegistration: UICollectionView.CellRegistration<UICollectionViewListCell, User>!
     
+    var dataSource: UICollectionViewDiffableDataSource<Int, User>!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //14+ 컬렉션뷰를 테이블뷰 스타일처럼 사용 가능 (List Configuration)
-        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        collectionView.collectionViewLayout = createLayout()
         
-        configuration.showsSeparators = false // 구분선 삭제
-        configuration.backgroundColor = .brown // 배경색 변경
+        //1. Identifier 2. struct 장점
         
-        
-        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
-        
-        collectionView.collectionViewLayout = layout
-        
+        // 셀 1개당 한번씩 실행
         cellRegistration = UICollectionView.CellRegistration { cell, indexPath, itemIdentifier in
             
             // content설정
             var content = UIListContentConfiguration.valueCell()
             // cell.defaultContentConfiguration()
             
-            content.text = "\(itemIdentifier)"
+            content.text = "\(itemIdentifier.name)"
             content.textProperties.color = .red
             
             content.secondaryText = "\(itemIdentifier.age)살"
@@ -60,24 +57,63 @@ class SimpleCollectionViewController: UICollectionViewController {
             content.textToSecondaryTextVerticalPadding = 20
                         
             content.image = itemIdentifier.age < 8 ? UIImage(systemName: "person.fill") : UIImage(systemName: "star.fill")
-            content.imageProperties.tintColor = .yellow
             
+            if indexPath.item < 3 {
+                content.imageProperties.tintColor = .yellow
+            }
+                                                                                                    
             cell.contentConfiguration = content
-            cell.backgroundConfiguration?.backgroundColor = .black
+//            cell.backgroundConfiguration?.backgroundColor = .black
+            
+//            var backgroundConfig = UIBackgroundConfiguration.listPlainCell()
+//            backgroundConfig.backgroundColor = .lightGray
+//            backgroundConfig.cornerRadius = 10
+//            backgroundConfig.strokeWidth = 2
+//            backgroundConfig.strokeColor = .systemPink
+//            cell.backgroundConfiguration = backgroundConfig
+            
+            cell.backgroundConfiguration = self.backgroundSetting()
         }
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return list.count
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let item = list[indexPath.item]
-        let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            let cell = collectionView.dequeueConfiguredReusableCell(using: self.cellRegistration, for: indexPath, item: itemIdentifier)
+            return cell
+        })
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Int, User>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(list)
+        dataSource.apply(snapshot)
+
         
         
-        return cell
     }
 
+}
+
+extension SimpleCollectionViewController {
+    
+    private func createLayout() -> UICollectionViewLayout {
+        //14+ 컬렉션뷰를 테이블뷰 스타일처럼 사용 가능 (List Configuration)
+        //컬렉션뷰 스타일 (컬렉션뷰 셀 X)
+        var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+        configuration.showsSeparators = false // 구분선 삭제
+        configuration.backgroundColor = .brown // 배경색 변경
+        
+        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
+        collectionView.collectionViewLayout = layout
+        return layout
+    }
+}
+
+extension SimpleCollectionViewController {
+    
+    private func backgroundSetting() -> UIBackgroundConfiguration {
+        var backgroundConfig = UIBackgroundConfiguration.listPlainCell()
+        backgroundConfig.backgroundColor = .lightGray
+        backgroundConfig.cornerRadius = 10
+        backgroundConfig.strokeWidth = 2
+        backgroundConfig.strokeColor = .systemPink
+        return backgroundConfig
+    }
 }
