@@ -11,31 +11,55 @@ class NewsViewController: UIViewController {
     
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var loadButton: UIButton!
+    
     var viewModel = NewsViewModel()
     
     var dataSource: UICollectionViewDiffableDataSource<Int, News.NewsItem>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureHierachy()
         configureDataSource()
-        
+        bindData()
+        configureViews()
+    }
+    
+    
+    func bindData() {
         //numberTextField.text = "3000"
         viewModel.pageNumber.bind { value in
             print("bind == \(value)")
             self.numberTextField.text = value
         }
         
+        viewModel.sample.bind { item in
+            var snapshot = NSDiffableDataSourceSnapshot<Int, News.NewsItem>()
+            snapshot.appendSections([0])
+            snapshot.appendItems(item)
+            self.dataSource.apply(snapshot, animatingDifferences: false)
+        }
+    }
+    
+    func configureViews() {
         numberTextField.addTarget(self, action: #selector(numberTextFieldChanged), for: .editingChanged)
-        
+        resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
+        loadButton.addTarget(self, action: #selector(loadButtonTapped), for: .touchUpInside)
     }
     
     @objc func numberTextFieldChanged() {
         print(#function)
         guard let text = numberTextField.text else { return }
         viewModel.changePageNumberFormat(text: text)
+    }
+    
+    @objc func resetButtonTapped() {
+        viewModel.resetSample()
+    }
+    
+    @objc func loadButtonTapped() {
+        viewModel.loadSample()
     }
 }
 
