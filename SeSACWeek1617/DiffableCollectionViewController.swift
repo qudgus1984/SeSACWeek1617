@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class DiffableCollectionViewController: UIViewController {
 
@@ -15,7 +14,6 @@ class DiffableCollectionViewController: UIViewController {
     
     var viewModel = DiffableViewModel()
     
-    var list = ["아이폰", "맥북", "아이패드", "애플 워치", "에어팟"]
     
     //Int : section String: Data
     private var dataSource: UICollectionViewDiffableDataSource<Int, SearchResult>!
@@ -36,8 +34,8 @@ class DiffableCollectionViewController: UIViewController {
             //Initial
             var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
             snapshot.appendSections([0])
-            snapshot.appendItems(SearchResult)
-            dataSource.apply(snapshot)
+            snapshot.appendItems(photo.results)
+            self.dataSource.apply(snapshot)
             
         }
         
