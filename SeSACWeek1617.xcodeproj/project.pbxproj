@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2F00ABA128FF906B00085771 /* DiffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00ABA028FF906B00085771 /* DiffableCollectionViewController.swift */; };
+		2F00ABA42900D0C500085771 /* CObeservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00ABA32900D0C500085771 /* CObeservable.swift */; };
+		2F00ABA62900D14100085771 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00ABA52900D14100085771 /* NewsViewController.swift */; };
+		2F00ABA82900D24E00085771 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00ABA72900D24E00085771 /* NewsViewModel.swift */; };
+		2F00ABAA2900D78300085771 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00ABA92900D78300085771 /* News.swift */; };
 		2FF4946328FE2DB500FD6D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */; };
 		2FF4946528FE2DB500FD6D9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */; };
 		2FF4946728FE2DB500FD6D9E /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946628FE2DB500FD6D9E /* SimpleTableViewController.swift */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		2F00ABA028FF906B00085771 /* DiffableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableCollectionViewController.swift; sourceTree = "<group>"; };
+		2F00ABA32900D0C500085771 /* CObeservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObeservable.swift; sourceTree = "<group>"; };
+		2F00ABA52900D14100085771 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		2F00ABA72900D24E00085771 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		2F00ABA92900D78300085771 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		2FF4945F28FE2DB500FD6D9E /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F00ABA22900CD8300085771 /* MVVMSample */ = {
+			isa = PBXGroup;
+			children = (
+				2F00ABA32900D0C500085771 /* CObeservable.swift */,
+				2F00ABA52900D14100085771 /* NewsViewController.swift */,
+				2F00ABA72900D24E00085771 /* NewsViewModel.swift */,
+				2F00ABA92900D78300085771 /* News.swift */,
+			);
+			path = MVVMSample;
+			sourceTree = "<group>";
+		};
 		2FF4945628FE2DB500FD6D9E = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +79,7 @@
 		2FF4946128FE2DB500FD6D9E /* SeSACWeek1617 */ = {
 			isa = PBXGroup;
 			children = (
+				2F00ABA22900CD8300085771 /* MVVMSample */,
 				2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */,
 				2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */,
 				2FF4946628FE2DB500FD6D9E /* SimpleTableViewController.swift */,
@@ -146,9 +166,13 @@
 			files = (
 				2F00ABA128FF906B00085771 /* DiffableCollectionViewController.swift in Sources */,
 				2FF4947728FE391000FD6D9E /* SimpleCollectionViewController.swift in Sources */,
+				2F00ABA62900D14100085771 /* NewsViewController.swift in Sources */,
+				2F00ABAA2900D78300085771 /* News.swift in Sources */,
+				2F00ABA42900D0C500085771 /* CObeservable.swift in Sources */,
 				2FF4946728FE2DB500FD6D9E /* SimpleTableViewController.swift in Sources */,
 				2FF4946328FE2DB500FD6D9E /* AppDelegate.swift in Sources */,
 				2FF4946528FE2DB500FD6D9E /* SceneDelegate.swift in Sources */,
+				2F00ABA82900D24E00085771 /* NewsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
