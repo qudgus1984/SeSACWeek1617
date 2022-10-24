@@ -28,6 +28,8 @@
 		2FD8433C29069ED90015AB90 /* RxNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8433B29069ED90015AB90 /* RxNumbersViewController.swift */; };
 		2FD8433E29069F000015AB90 /* Rx.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD8433D29069F000015AB90 /* Rx.storyboard */; };
 		2FD843402906B7580015AB90 /* RxSimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8433F2906B7580015AB90 /* RxSimpleValidationViewController.swift */; };
+		2FD843432906CB310015AB90 /* RxTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD843422906CB310015AB90 /* RxTabbarViewController.swift */; };
+		2FD843452906CE060015AB90 /* CustomPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD843442906CE060015AB90 /* CustomPickerViewController.swift */; };
 		2FF4946328FE2DB500FD6D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */; };
 		2FF4946528FE2DB500FD6D9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */; };
 		2FF4946728FE2DB500FD6D9E /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946628FE2DB500FD6D9E /* SimpleTableViewController.swift */; };
@@ -55,6 +57,8 @@
 		2FD8433B29069ED90015AB90 /* RxNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNumbersViewController.swift; sourceTree = "<group>"; };
 		2FD8433D29069F000015AB90 /* Rx.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rx.storyboard; sourceTree = "<group>"; };
 		2FD8433F2906B7580015AB90 /* RxSimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSimpleValidationViewController.swift; sourceTree = "<group>"; };
+		2FD843422906CB310015AB90 /* RxTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTabbarViewController.swift; sourceTree = "<group>"; };
+		2FD843442906CE060015AB90 /* CustomPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerViewController.swift; sourceTree = "<group>"; };
 		2FF4945F28FE2DB500FD6D9E /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 		2FD8432D290625C00015AB90 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
+				2FD843412906CB100015AB90 /* RxTapbarExample */,
 				2FD8432B290625BC0015AB90 /* RxCocoaExampleViewController.swift */,
 				2FD8433B29069ED90015AB90 /* RxNumbersViewController.swift */,
 				2FD8433D29069F000015AB90 /* Rx.storyboard */,
@@ -113,6 +118,15 @@
 				2FD84337290672200015AB90 /* DiffableRandomPhotoViewModel.swift */,
 			);
 			path = "Unsplash + MVVM";
+			sourceTree = "<group>";
+		};
+		2FD843412906CB100015AB90 /* RxTapbarExample */ = {
+			isa = PBXGroup;
+			children = (
+				2FD843422906CB310015AB90 /* RxTabbarViewController.swift */,
+				2FD843442906CE060015AB90 /* CustomPickerViewController.swift */,
+			);
+			path = RxTapbarExample;
 			sourceTree = "<group>";
 		};
 		2FF4945628FE2DB500FD6D9E = {
@@ -244,11 +258,13 @@
 				2F00ABAE2900EDF300085771 /* APIService.swift in Sources */,
 				2F00ABA42900D0C500085771 /* CObeservable.swift in Sources */,
 				2FF4946728FE2DB500FD6D9E /* SimpleTableViewController.swift in Sources */,
+				2FD843452906CE060015AB90 /* CustomPickerViewController.swift in Sources */,
 				2FF4946328FE2DB500FD6D9E /* AppDelegate.swift in Sources */,
 				2F00ABB22900EF7500085771 /* SearchPhoto.swift in Sources */,
 				2FF4946528FE2DB500FD6D9E /* SceneDelegate.swift in Sources */,
 				2F00ABA82900D24E00085771 /* NewsViewModel.swift in Sources */,
 				2F00ABB02900EE3900085771 /* APIKey.swift in Sources */,
+				2FD843432906CB310015AB90 /* RxTabbarViewController.swift in Sources */,
 				2F00ABAC2900ED6F00085771 /* DiffableViewModel.swift in Sources */,
 				2FD84332290665E00015AB90 /* RandomAPIService.swift in Sources */,
 				2FD84330290661B20015AB90 /* RandomPhoto.swift in Sources */,
