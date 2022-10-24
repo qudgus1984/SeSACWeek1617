@@ -25,6 +25,8 @@
 		2FD84332290665E00015AB90 /* RandomAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD84331290665E00015AB90 /* RandomAPIService.swift */; };
 		2FD84336290668380015AB90 /* DiffableRandomPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD84335290668380015AB90 /* DiffableRandomPhotoCollectionViewController.swift */; };
 		2FD84338290672200015AB90 /* DiffableRandomPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD84337290672200015AB90 /* DiffableRandomPhotoViewModel.swift */; };
+		2FD8433C29069ED90015AB90 /* RxNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8433B29069ED90015AB90 /* RxNumbersViewController.swift */; };
+		2FD8433E29069F000015AB90 /* Rx.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD8433D29069F000015AB90 /* Rx.storyboard */; };
 		2FF4946328FE2DB500FD6D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */; };
 		2FF4946528FE2DB500FD6D9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */; };
 		2FF4946728FE2DB500FD6D9E /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946628FE2DB500FD6D9E /* SimpleTableViewController.swift */; };
@@ -49,6 +51,8 @@
 		2FD84331290665E00015AB90 /* RandomAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPIService.swift; sourceTree = "<group>"; };
 		2FD84335290668380015AB90 /* DiffableRandomPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableRandomPhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		2FD84337290672200015AB90 /* DiffableRandomPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableRandomPhotoViewModel.swift; sourceTree = "<group>"; };
+		2FD8433B29069ED90015AB90 /* RxNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNumbersViewController.swift; sourceTree = "<group>"; };
+		2FD8433D29069F000015AB90 /* Rx.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rx.storyboard; sourceTree = "<group>"; };
 		2FF4945F28FE2DB500FD6D9E /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				2FD8432B290625BC0015AB90 /* RxCocoaExampleViewController.swift */,
+				2FD8433B29069ED90015AB90 /* RxNumbersViewController.swift */,
+				2FD8433D29069F000015AB90 /* Rx.storyboard */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 			files = (
 				2FF4946F28FE2DB600FD6D9E /* LaunchScreen.storyboard in Resources */,
 				2FF4946C28FE2DB600FD6D9E /* Assets.xcassets in Resources */,
+				2FD8433E29069F000015AB90 /* Rx.storyboard in Resources */,
 				2FF4946A28FE2DB500FD6D9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +249,7 @@
 				2F00ABAC2900ED6F00085771 /* DiffableViewModel.swift in Sources */,
 				2FD84332290665E00015AB90 /* RandomAPIService.swift in Sources */,
 				2FD84330290661B20015AB90 /* RandomPhoto.swift in Sources */,
+				2FD8433C29069ED90015AB90 /* RxNumbersViewController.swift in Sources */,
 				2FD8432C290625BC0015AB90 /* RxCocoaExampleViewController.swift in Sources */,
 				2FD84338290672200015AB90 /* DiffableRandomPhotoViewModel.swift in Sources */,
 			);
@@ -395,7 +403,7 @@
 				INFOPLIST_FILE = SeSACWeek1617/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Rx;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -423,7 +431,7 @@
 				INFOPLIST_FILE = SeSACWeek1617/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Rx;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
