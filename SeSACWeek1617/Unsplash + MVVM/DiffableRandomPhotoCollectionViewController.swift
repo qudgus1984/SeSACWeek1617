@@ -1,83 +1,49 @@
-//
-//  DiffableCollectionViewController.swift
-//  SeSACWeek1617
-//
-//  Created by 이병현 on 2022/10/19.
-//
-
 import UIKit
 
-class DiffableCollectionViewController: UIViewController {
-
-    @IBOutlet weak var searchBar: UISearchBar!
+class DiffableRandomPhotoCollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var viewModel = DiffableViewModel()
+    var viewModel = DiffableRandomPhotoViewModel()
     
     
     //Int : section String: Data
-    private var dataSource: UICollectionViewDiffableDataSource<Int, SearchResult>!
-        
+    private var dataSource: UICollectionViewDiffableDataSource<Int, RandomUser>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-//        APIService.searchPhoto(query: "apple")
-
         collectionView.collectionViewLayout = createLayout()
         configureDataSource()
         collectionView.delegate = self
-        
-        searchBar.delegate = self
-        
+                
         viewModel.photoList.bind { photo in
             //Initial
-            var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
+            var snapshot = NSDiffableDataSourceSnapshot<Int, RandomUser>()
             snapshot.appendSections([0])
-            snapshot.appendItems(photo.results)
+            snapshot.appendItems(photo.user)
             self.dataSource.apply(snapshot)
-            
-            
         }
-        
+        viewModel.requestRandomhPhoto(query: "random")
     }
-    
 }
-
-extension DiffableCollectionViewController: UICollectionViewDelegate {
+extension DiffableRandomPhotoCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-//        guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
-        
-//        let alert = UIAlertController(title: item, message: "클릭!", preferredStyle: .alert)
-//        let ok = UIAlertAction(title: "확인", style: .cancel)
-//        alert.addAction(ok)
-//        present(alert, animated: true)
+
     }
 }
-
-extension DiffableCollectionViewController: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.requestSearchPhoto(query: searchBar.text!)
-    }
-    
-}
-
-extension DiffableCollectionViewController {
+extension DiffableRandomPhotoCollectionViewController {
     
     private func createLayout() -> UICollectionViewLayout {
         let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        
         let layout = UICollectionViewCompositionalLayout.list(using: config)
         
         return layout
     }
     
     private func configureDataSource() {
-        let cellRegistertion = UICollectionView.CellRegistration<UICollectionViewListCell, SearchResult>(handler: { cell, indexPath, itemIdentifier in
+        let cellRegistertion = UICollectionView.CellRegistration<UICollectionViewListCell, RandomUser>(handler: { cell, indexPath, itemIdentifier in
             var content = UIListContentConfiguration.valueCell()
-            content.text = "\(itemIdentifier.likes)"
+            content.text = "\(itemIdentifier.totalLikes)"
             
             DispatchQueue.global().async {
                 let url = URL(string: itemIdentifier.urls.thumb)!
@@ -105,3 +71,6 @@ extension DiffableCollectionViewController {
         })
     }
 }
+
+    
+    

@@ -21,6 +21,10 @@
 		2FD84328290622B00015AB90 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FD84327290622B00015AB90 /* RxCocoa */; };
 		2FD8432A290622B00015AB90 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FD84329290622B00015AB90 /* RxSwift */; };
 		2FD8432C290625BC0015AB90 /* RxCocoaExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8432B290625BC0015AB90 /* RxCocoaExampleViewController.swift */; };
+		2FD84330290661B20015AB90 /* RandomPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8432F290661B20015AB90 /* RandomPhoto.swift */; };
+		2FD84332290665E00015AB90 /* RandomAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD84331290665E00015AB90 /* RandomAPIService.swift */; };
+		2FD84336290668380015AB90 /* DiffableRandomPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD84335290668380015AB90 /* DiffableRandomPhotoCollectionViewController.swift */; };
+		2FD84338290672200015AB90 /* DiffableRandomPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD84337290672200015AB90 /* DiffableRandomPhotoViewModel.swift */; };
 		2FF4946328FE2DB500FD6D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */; };
 		2FF4946528FE2DB500FD6D9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */; };
 		2FF4946728FE2DB500FD6D9E /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF4946628FE2DB500FD6D9E /* SimpleTableViewController.swift */; };
@@ -41,6 +45,10 @@
 		2F00ABAF2900EE3900085771 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		2F00ABB12900EF7500085771 /* SearchPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhoto.swift; sourceTree = "<group>"; };
 		2FD8432B290625BC0015AB90 /* RxCocoaExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaExampleViewController.swift; sourceTree = "<group>"; };
+		2FD8432F290661B20015AB90 /* RandomPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhoto.swift; sourceTree = "<group>"; };
+		2FD84331290665E00015AB90 /* RandomAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPIService.swift; sourceTree = "<group>"; };
+		2FD84335290668380015AB90 /* DiffableRandomPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableRandomPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		2FD84337290672200015AB90 /* DiffableRandomPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableRandomPhotoViewModel.swift; sourceTree = "<group>"; };
 		2FF4945F28FE2DB500FD6D9E /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF4946228FE2DB500FD6D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +95,17 @@
 			path = Rx;
 			sourceTree = "<group>";
 		};
+		2FD8432E29065EC30015AB90 /* Unsplash + MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				2FD8432F290661B20015AB90 /* RandomPhoto.swift */,
+				2FD84331290665E00015AB90 /* RandomAPIService.swift */,
+				2FD84335290668380015AB90 /* DiffableRandomPhotoCollectionViewController.swift */,
+				2FD84337290672200015AB90 /* DiffableRandomPhotoViewModel.swift */,
+			);
+			path = "Unsplash + MVVM";
+			sourceTree = "<group>";
+		};
 		2FF4945628FE2DB500FD6D9E = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +125,7 @@
 		2FF4946128FE2DB500FD6D9E /* SeSACWeek1617 */ = {
 			isa = PBXGroup;
 			children = (
+				2FD8432E29065EC30015AB90 /* Unsplash + MVVM */,
 				2FD8432D290625C00015AB90 /* Rx */,
 				2F00ABA22900CD8300085771 /* MVVMSample */,
 				2FF4946428FE2DB500FD6D9E /* SceneDelegate.swift */,
@@ -210,6 +230,7 @@
 				2FF4947728FE391000FD6D9E /* SimpleCollectionViewController.swift in Sources */,
 				2F00ABA62900D14100085771 /* NewsViewController.swift in Sources */,
 				2F00ABAA2900D78300085771 /* News.swift in Sources */,
+				2FD84336290668380015AB90 /* DiffableRandomPhotoCollectionViewController.swift in Sources */,
 				2F00ABAE2900EDF300085771 /* APIService.swift in Sources */,
 				2F00ABA42900D0C500085771 /* CObeservable.swift in Sources */,
 				2FF4946728FE2DB500FD6D9E /* SimpleTableViewController.swift in Sources */,
@@ -219,7 +240,10 @@
 				2F00ABA82900D24E00085771 /* NewsViewModel.swift in Sources */,
 				2F00ABB02900EE3900085771 /* APIKey.swift in Sources */,
 				2F00ABAC2900ED6F00085771 /* DiffableViewModel.swift in Sources */,
+				2FD84332290665E00015AB90 /* RandomAPIService.swift in Sources */,
+				2FD84330290661B20015AB90 /* RandomPhoto.swift in Sources */,
 				2FD8432C290625BC0015AB90 /* RxCocoaExampleViewController.swift in Sources */,
+				2FD84338290672200015AB90 /* DiffableRandomPhotoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
