@@ -33,7 +33,7 @@ class RxCocoaExampleViewController: UIViewController {
             .disposed(by: disposeBag)
         
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//            self.nickname.text = "Hello"
+//            self.nickname = "Hello"
 //        }
         
         
@@ -46,7 +46,7 @@ class RxCocoaExampleViewController: UIViewController {
     
     //viewcontroller deinit이 되면, 알아서 disposed도 동작한다.
     deinit {
-        print("RxCocoaViewController")
+        print("deinit")
     }
     
     

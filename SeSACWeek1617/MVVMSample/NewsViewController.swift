@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class NewsViewController: UIViewController {
     
@@ -15,6 +17,7 @@ class NewsViewController: UIViewController {
     @IBOutlet weak var loadButton: UIButton!
     
     var viewModel = NewsViewModel()
+    var disposeBag = DisposeBag()
     
     var dataSource: UICollectionViewDiffableDataSource<Int, News.NewsItem>!
     
@@ -42,10 +45,28 @@ class NewsViewController: UIViewController {
         }
     }
     
+
+    
     func configureViews() {
         numberTextField.addTarget(self, action: #selector(numberTextFieldChanged), for: .editingChanged)
-        resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
-        loadButton.addTarget(self, action: #selector(loadButtonTapped), for: .touchUpInside)
+//        resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
+//        loadButton.addTarget(self, action: #selector(loadButtonTapped), for: .touchUpInside)
+        
+//        loadButton.rx.tap
+//            .withUnretained(self)
+//            .subscribe { (vc, _) in
+//                vc.viewModel.loadRxSample()
+//            }
+//            .disposed(by: disposeBag)
+//        
+//        resetButton.rx.tap
+//            .withUnretained(self)
+//            .subscribe { (vc, _) in
+//                vc.viewModel.resetRxSample()
+//            }
+//            .disposed(by: disposeBag)
+        
+        
     }
     
     @objc func numberTextFieldChanged() {
@@ -53,7 +74,7 @@ class NewsViewController: UIViewController {
         guard let text = numberTextField.text else { return }
         viewModel.changePageNumberFormat(text: text)
     }
-    
+
     @objc func resetButtonTapped() {
         viewModel.resetSample()
     }

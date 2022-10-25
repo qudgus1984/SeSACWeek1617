@@ -21,7 +21,6 @@ class SubjectViewController: UIViewController {
     let publish = PublishSubject<Int>() //초기값이 없는 빈 상태
     let behavior = BehaviorSubject(value: 100) //초기값 필수
     let replay = ReplaySubject<Int>.create(bufferSize: 3) // bufferSize 작성된 이벤트 갯수만큼 메모리에서 이벤트를 가지고 있다가, subscribe 직후 한 번에 이벤트 전달
-    
     let async = AsyncSubject<Int>()
     
     var disposeBag = DisposeBag()
@@ -31,6 +30,7 @@ class SubjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ContactCell")
         
         viewModel.list
@@ -38,7 +38,7 @@ class SubjectViewController: UIViewController {
                 cell.textLabel?.text = "\(element.name): \(element.age)세 (\(element.number))"
             }
             .disposed(by: disposeBag)
-
+        
         addButton.rx.tap
             .withUnretained(self)
             .subscribe { (vc, _) in
@@ -61,7 +61,7 @@ class SubjectViewController: UIViewController {
             .disposed(by: disposeBag)
         
         searchBar.rx.text.orEmpty
-            //.distinctUntilChanged() //같은 값을 받지 않음
+        //.distinctUntilChanged() //같은 값을 받지 않음
             .withUnretained(self)
             .debounce(RxTimeInterval.seconds(1), scheduler: MainScheduler.instance) //wait
             .subscribe { (vc, value) in
@@ -202,5 +202,6 @@ extension SubjectViewController {
             
         }
     }
-
 }
+
+
