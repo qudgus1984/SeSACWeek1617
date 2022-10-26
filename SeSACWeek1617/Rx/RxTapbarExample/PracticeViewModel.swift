@@ -1,21 +1,19 @@
 //
-//  DiffableViewModel.swift
+//  PracticeViewModel.swift
 //  SeSACWeek1617
 //
-//  Created by 이병현 on 2022/10/20.
+//  Created by 이병현 on 2022/10/26.
 //
 
 import Foundation
 import RxSwift
 
-enum SearchError: Error {
-    case nophoto
+enum error {
+    case noImage
     case serverError
 }
 
-class DiffableViewModel {
-    
-//    var photoList: CObservable<SearchPhoto> = CObservable(SearchPhoto(total: 0, totalPages: 0, results: []))
+class PracticeViewModel {
     var photoList = PublishSubject<SearchPhoto>()
     
     func requestSearchPhoto(query: String) {
@@ -30,8 +28,8 @@ class DiffableViewModel {
                 self?.photoList.onError(SearchError.nophoto)
                 return
             }
-//            self.photoList.value = photo
             self?.photoList.onNext(photo)
         }
     }
+    
 }

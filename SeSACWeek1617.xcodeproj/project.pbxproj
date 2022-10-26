@@ -19,6 +19,8 @@
 		2F00ABB52900F10800085771 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2F00ABB42900F10800085771 /* Alamofire */; };
 		2F00ABB82900F11500085771 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2F00ABB72900F11500085771 /* Kingfisher */; };
 		2F91CF672908CBB4003CA954 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91CF662908CBB4003CA954 /* SubscribeViewController.swift */; };
+		2F91CF8929093A70003CA954 /* PracticeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91CF8829093A70003CA954 /* PracticeCollectionViewController.swift */; };
+		2F91CF8B290942F7003CA954 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91CF8A290942F7003CA954 /* PracticeViewModel.swift */; };
 		2FD84328290622B00015AB90 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FD84327290622B00015AB90 /* RxCocoa */; };
 		2FD8432A290622B00015AB90 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FD84329290622B00015AB90 /* RxSwift */; };
 		2FD8432C290625BC0015AB90 /* RxCocoaExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8432B290625BC0015AB90 /* RxCocoaExampleViewController.swift */; };
@@ -53,6 +55,8 @@
 		2F00ABAF2900EE3900085771 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		2F00ABB12900EF7500085771 /* SearchPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhoto.swift; sourceTree = "<group>"; };
 		2F91CF662908CBB4003CA954 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
+		2F91CF8829093A70003CA954 /* PracticeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCollectionViewController.swift; sourceTree = "<group>"; };
+		2F91CF8A290942F7003CA954 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
 		2FD8432B290625BC0015AB90 /* RxCocoaExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaExampleViewController.swift; sourceTree = "<group>"; };
 		2FD8432F290661B20015AB90 /* RandomPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhoto.swift; sourceTree = "<group>"; };
 		2FD84331290665E00015AB90 /* RandomAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPIService.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 			children = (
 				2FD843422906CB310015AB90 /* RxTabbarViewController.swift */,
 				2FD843442906CE060015AB90 /* CustomPickerViewController.swift */,
+				2F91CF8829093A70003CA954 /* PracticeCollectionViewController.swift */,
+				2F91CF8A290942F7003CA954 /* PracticeViewModel.swift */,
 			);
 			path = RxTapbarExample;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 				2FF4946328FE2DB500FD6D9E /* AppDelegate.swift in Sources */,
 				2F00ABB22900EF7500085771 /* SearchPhoto.swift in Sources */,
 				2FF4946528FE2DB500FD6D9E /* SceneDelegate.swift in Sources */,
+				2F91CF8B290942F7003CA954 /* PracticeViewModel.swift in Sources */,
 				2F00ABA82900D24E00085771 /* NewsViewModel.swift in Sources */,
 				2F00ABB02900EE3900085771 /* APIKey.swift in Sources */,
 				2FD843432906CB310015AB90 /* RxTabbarViewController.swift in Sources */,
@@ -293,6 +300,7 @@
 				2FD8434A290788A20015AB90 /* SubjectViewModel.swift in Sources */,
 				2FD84338290672200015AB90 /* DiffableRandomPhotoViewModel.swift in Sources */,
 				2FD843402906B7580015AB90 /* RxSimpleValidationViewController.swift in Sources */,
+				2F91CF8929093A70003CA954 /* PracticeCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

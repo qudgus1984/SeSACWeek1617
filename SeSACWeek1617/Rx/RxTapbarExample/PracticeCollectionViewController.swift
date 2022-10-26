@@ -1,32 +1,31 @@
 //
-//  DiffableCollectionViewController.swift
+//  PracticeCollectionViewController.swift
 //  SeSACWeek1617
 //
-//  Created by 이병현 on 2022/10/19.
+//  Created by 이병현 on 2022/10/26.
 //
 
 import UIKit
 import RxSwift
 import RxCocoa
 
-class DiffableCollectionViewController: UIViewController {
-
-    @IBOutlet weak var searchBar: UISearchBar!
+class PracticeViewController: UIViewController {
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
-    var viewModel = DiffableViewModel()
+    var viewModel = PracticeViewModel()
     let disposeBag = DisposeBag()
-    
+
     //Int : section String: Data
-    private var dataSource: UICollectionViewDiffableDataSource<Int, SearchResult>!
-        
+    var dataSource: UICollectionViewDiffableDataSource<Int, SearchResult>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bindData()
         collectionView.collectionViewLayout = createLayout()
         configureDataSource()
-
     }
     
     func bindData() {
@@ -34,7 +33,6 @@ class DiffableCollectionViewController: UIViewController {
             .withUnretained(self)
             .subscribe(onNext: { (vc, photo) in
                 var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
-                
                 
                 snapshot.appendSections([0])
                 snapshot.appendItems(photo.results)
@@ -61,13 +59,11 @@ class DiffableCollectionViewController: UIViewController {
     }
 }
 
-extension DiffableCollectionViewController {
+extension PracticeViewController {
     
     private func createLayout() -> UICollectionViewLayout {
         let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        
         let layout = UICollectionViewCompositionalLayout.list(using: config)
-        
         return layout
     }
     
@@ -94,8 +90,6 @@ extension DiffableCollectionViewController {
             cell.backgroundConfiguration = background
         })
         
-        //collectionView.dataSource = self 역할
-        //numberOfItemInSection, cellForItemAt
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistertion, for: indexPath, item: itemIdentifier)
             return cell
