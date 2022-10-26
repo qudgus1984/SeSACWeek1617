@@ -9,15 +9,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class DiffableCollectionViewController: UIViewController, UISearchBarDelegate {
+class DiffableCollectionViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel = DiffableViewModel()
-    
     let disposeBag = DisposeBag()
-    
     
     //Int : section String: Data
     private var dataSource: UICollectionViewDiffableDataSource<Int, SearchResult>!
@@ -25,14 +23,10 @@ class DiffableCollectionViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-//        APIService.searchPhoto(query: "apple")
-
         bindData()
         collectionView.collectionViewLayout = createLayout()
         configureDataSource()
-//        collectionView.delegate = self
-        searchBar.delegate = self
+
     }
     
     func bindData() {
@@ -40,6 +34,8 @@ class DiffableCollectionViewController: UIViewController, UISearchBarDelegate {
             .withUnretained(self)
             .subscribe(onNext: { (vc, photo) in
                 var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
+                
+                
                 snapshot.appendSections([0])
                 snapshot.appendItems(photo.results)
                 vc.dataSource.apply(snapshot)
@@ -50,7 +46,7 @@ class DiffableCollectionViewController: UIViewController, UISearchBarDelegate {
             }, onDisposed: {
                 print("disposed")
             })
-            .disposed(by: disposeBag)
+            .disposed(by: disposeBag) //????????
         
         searchBar
             .rx
@@ -64,15 +60,6 @@ class DiffableCollectionViewController: UIViewController, UISearchBarDelegate {
             .disposed(by: disposeBag)
     }
 }
-
-
-//extension DiffableCollectionViewController: UISearchBarDelegate {
-//
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        viewModel.requestSearchPhoto(query: searchBar.text!)
-//    }
-//
-//}
 
 extension DiffableCollectionViewController {
     

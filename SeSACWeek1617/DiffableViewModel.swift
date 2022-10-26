@@ -17,6 +17,7 @@ class DiffableViewModel {
     
 //    var photoList: CObservable<SearchPhoto> = CObservable(SearchPhoto(total: 0, totalPages: 0, results: []))
     var photoList = PublishSubject<SearchPhoto>()
+    var photoObList = Observable.just(SearchPhoto.self)
     
     func requestSearchPhoto(query: String) {
         APIService.searchPhoto(query: query) { [weak self] photo, statusCode, error in
