@@ -230,9 +230,6 @@ class RxCocoaExampleViewController: UIViewController {
             }
             .bind(to: simpleLabel.rx.text)
             .disposed(by: disposeBag)
-        
-        
-        
     }
     
     func setPickerView() {

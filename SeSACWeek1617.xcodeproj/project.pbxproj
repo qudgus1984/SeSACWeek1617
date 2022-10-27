@@ -21,6 +21,8 @@
 		2F91CF672908CBB4003CA954 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91CF662908CBB4003CA954 /* SubscribeViewController.swift */; };
 		2F91CF8929093A70003CA954 /* PracticeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91CF8829093A70003CA954 /* PracticeCollectionViewController.swift */; };
 		2F91CF8B290942F7003CA954 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F91CF8A290942F7003CA954 /* PracticeViewModel.swift */; };
+		2F9D5FBE290A07B400EBC793 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D5FBD290A07B400EBC793 /* ValidationViewController.swift */; };
+		2F9D5FC0290A229200EBC793 /* ValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9D5FBF290A229200EBC793 /* ValidationViewModel.swift */; };
 		2FD84328290622B00015AB90 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2FD84327290622B00015AB90 /* RxCocoa */; };
 		2FD8432A290622B00015AB90 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FD84329290622B00015AB90 /* RxSwift */; };
 		2FD8432C290625BC0015AB90 /* RxCocoaExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8432B290625BC0015AB90 /* RxCocoaExampleViewController.swift */; };
@@ -57,6 +59,8 @@
 		2F91CF662908CBB4003CA954 /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		2F91CF8829093A70003CA954 /* PracticeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCollectionViewController.swift; sourceTree = "<group>"; };
 		2F91CF8A290942F7003CA954 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
+		2F9D5FBD290A07B400EBC793 /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
+		2F9D5FBF290A229200EBC793 /* ValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewModel.swift; sourceTree = "<group>"; };
 		2FD8432B290625BC0015AB90 /* RxCocoaExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaExampleViewController.swift; sourceTree = "<group>"; };
 		2FD8432F290661B20015AB90 /* RandomPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhoto.swift; sourceTree = "<group>"; };
 		2FD84331290665E00015AB90 /* RandomAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPIService.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				2FD8434729077A830015AB90 /* SubjectViewController.swift */,
 				2FD84349290788A20015AB90 /* SubjectViewModel.swift */,
 				2F91CF662908CBB4003CA954 /* SubscribeViewController.swift */,
+				2F9D5FBD290A07B400EBC793 /* ValidationViewController.swift */,
+				2F9D5FBF290A229200EBC793 /* ValidationViewModel.swift */,
 			);
 			name = "수업시간Rx실습";
 			path = "수업시간Rx실습";
@@ -277,6 +283,7 @@
 				2F00ABA128FF906B00085771 /* DiffableCollectionViewController.swift in Sources */,
 				2FF4947728FE391000FD6D9E /* SimpleCollectionViewController.swift in Sources */,
 				2F00ABA62900D14100085771 /* NewsViewController.swift in Sources */,
+				2F9D5FBE290A07B400EBC793 /* ValidationViewController.swift in Sources */,
 				2F00ABAA2900D78300085771 /* News.swift in Sources */,
 				2FD84336290668380015AB90 /* DiffableRandomPhotoCollectionViewController.swift in Sources */,
 				2F00ABAE2900EDF300085771 /* APIService.swift in Sources */,
@@ -296,6 +303,7 @@
 				2FD84330290661B20015AB90 /* RandomPhoto.swift in Sources */,
 				2F91CF672908CBB4003CA954 /* SubscribeViewController.swift in Sources */,
 				2FD8433C29069ED90015AB90 /* RxNumbersViewController.swift in Sources */,
+				2F9D5FC0290A229200EBC793 /* ValidationViewModel.swift in Sources */,
 				2FD8432C290625BC0015AB90 /* RxCocoaExampleViewController.swift in Sources */,
 				2FD8434A290788A20015AB90 /* SubjectViewModel.swift in Sources */,
 				2FD84338290672200015AB90 /* DiffableRandomPhotoViewModel.swift in Sources */,

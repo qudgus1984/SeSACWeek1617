@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SKF-lE-bP7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="17r-wB-t5n">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -463,6 +463,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16e-wB-9Bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7786.1538461538457" y="-28.436018957345969"/>
+        </scene>
+        <!--Validation View Controller-->
+        <scene sceneID="8CY-N0-fev">
+            <objects>
+                <viewController id="17r-wB-t5n" customClass="ValidationViewController" customModule="SeSACWeek1617" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U6G-z3-6Jz">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRc-KC-grj">
+                                <rect key="frame" x="20" y="67" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dq3-4N-I2T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8자 이상!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMu-7o-6LH">
+                                <rect key="frame" x="20" y="137" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Idv-sI-asi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvM-zL-5O3">
+                                <rect key="frame" x="20" y="207" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kGz-GM-Fsw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Egv-Dm-sdu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jMu-7o-6LH" firstAttribute="leading" secondItem="Egv-Dm-sdu" secondAttribute="leading" constant="20" id="5jw-pf-Xf5"/>
+                            <constraint firstItem="DRc-KC-grj" firstAttribute="top" secondItem="Egv-Dm-sdu" secondAttribute="top" constant="20" id="S2V-iE-Iuv"/>
+                            <constraint firstItem="xvM-zL-5O3" firstAttribute="leading" secondItem="Egv-Dm-sdu" secondAttribute="leading" constant="20" id="VEt-DL-JFf"/>
+                            <constraint firstItem="jMu-7o-6LH" firstAttribute="top" secondItem="DRc-KC-grj" secondAttribute="bottom" constant="20" id="f6W-7e-aGU"/>
+                            <constraint firstItem="xvM-zL-5O3" firstAttribute="top" secondItem="jMu-7o-6LH" secondAttribute="bottom" constant="20" id="fK3-Fy-jyH"/>
+                            <constraint firstItem="Egv-Dm-sdu" firstAttribute="trailing" secondItem="xvM-zL-5O3" secondAttribute="trailing" constant="20" id="lbK-h3-L4m"/>
+                            <constraint firstItem="Egv-Dm-sdu" firstAttribute="trailing" secondItem="jMu-7o-6LH" secondAttribute="trailing" constant="20" id="mst-s7-uDH"/>
+                            <constraint firstItem="Egv-Dm-sdu" firstAttribute="trailing" secondItem="DRc-KC-grj" secondAttribute="trailing" constant="20" id="nQB-Mh-VxT"/>
+                            <constraint firstItem="DRc-KC-grj" firstAttribute="leading" secondItem="Egv-Dm-sdu" secondAttribute="leading" constant="20" id="vuY-EK-OzU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="DRc-KC-grj" id="bKk-Nn-0dT"/>
+                        <outlet property="stepButton" destination="xvM-zL-5O3" id="meQ-Sw-sVY"/>
+                        <outlet property="validationLabel" destination="jMu-7o-6LH" id="yTH-K7-GLP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bce-L3-4J9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8975" y="-28"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fp5-YV-0cB">
