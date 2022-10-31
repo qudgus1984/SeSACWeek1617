@@ -8,6 +8,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import RxAlamofire
 
 class SubscribeViewController: UIViewController {
     
@@ -16,11 +17,48 @@ class SubscribeViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
+    func testRxAlamofire() {
+        //Success Error => <Single>
+        let url = APIKey.searchURL + "apple"
+        request(.get, url, headers: ["Authorization": APIKey.authorization])
+            .data()
+            .decode(type: SearchPhoto.self, decoder: JSONDecoder())
+            .subscribe(onNext: { value in
+                print(value.results[0].likes)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        testRxAlamofire()
+        
+        
+        
+        
+        
+        Observable.of(1,2,3,4,5,6,7,8,9,10)
+            .skip(3)
+            .debug()
+            .filter { $0 % 2 == 0 }
+            .debug()
+            .map { $0 * 2}
+            .subscribe { value in
+                print("===\(value)")
+            }
+            .disposed(by: disposeBag)
+        
+        
+        
+        
+        
         // 1
-        button.rx.tap
+        let sample = button.rx.tap
+            sample
             .subscribe { [weak self] _ in
                 self?.label.text = "안녕, 반가워"
             }

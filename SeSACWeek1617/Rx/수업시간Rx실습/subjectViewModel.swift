@@ -23,7 +23,7 @@ class SubjectViewModel {
         Contact(name: "Real Jack", age: 25, number: "01056785678")
     ]
     
-    var list = PublishSubject<[Contact]>()
+    var list = PublishSubject<[Contact]>() // 구독 전에 이벤트를 전달한다면?
     
     func fetchData() {
         list.onNext(contactData)
@@ -40,8 +40,6 @@ class SubjectViewModel {
     }
     
     func filterData(query: String) {
-
-            
             let result = query != "" ? contactData.filter {
                 $0.name.contains(query) } : contactData
             list.onNext(result)

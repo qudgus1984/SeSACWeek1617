@@ -44,7 +44,7 @@ class ValidationViewController: UIViewController {
             }
             .disposed(by: disposeBag)
          */
-        
+
         viewModel.validText
             .asDriver(onErrorJustReturn: "ERROR")
             .drive(validationLabel.rx.text)
@@ -112,44 +112,44 @@ class ValidationViewController: UIViewController {
     
     func observableVCSubject() {
         //just of from
-//        let sampleInt = Observable<Int>.create { observer in
-//            observer.onNext(Int.random(in: 1...100))
-//            return Disposables.create()
-//        }
+        let sampleInt = Observable<Int>.create { observer in
+            observer.onNext(Int.random(in: 1...100))
+            return Disposables.create()
+        }
+
+        sampleInt.subscribe { value in
+            print("sampleInt: \(value)")
+        }
+        .disposed(by: disposeBag)
+
+        sampleInt.subscribe { value in
+            print("sampleInt: \(value)")
+        }
+        .disposed(by: disposeBag)
+
+        sampleInt.subscribe { value in
+            print("sampleInt: \(value)")
+        }
+        .disposed(by: disposeBag)
 //
-//        sampleInt.subscribe { value in
-//            print("sampleInt: \(value)")
-//        }
-//        .disposed(by: disposeBag)
-//
-//        sampleInt.subscribe { value in
-//            print("sampleInt: \(value)")
-//        }
-//        .disposed(by: disposeBag)
-//
-//        sampleInt.subscribe { value in
-//            print("sampleInt: \(value)")
-//        }
-//        .disposed(by: disposeBag)
-//
-//
-//        let subjectInt = BehaviorSubject(value: 0)
-//        subjectInt.onNext(Int.random(in: 1...100))
-//
-//        subjectInt.subscribe { value in
-//            print("subjectInt: \(value)")
-//        }
-//        .disposed(by: disposeBag)
-//
-//        subjectInt.subscribe { value in
-//            print("subjectInt: \(value)")
-//        }
-//        .disposed(by: disposeBag)
-//
-//        subjectInt.subscribe { value in
-//            print("subjectInt: \(value)")
-//        }
-//        .disposed(by: disposeBag)
+
+        let subjectInt = BehaviorSubject(value: 0)
+        subjectInt.onNext(Int.random(in: 1...100))
+
+        subjectInt.subscribe { value in
+            print("subjectInt: \(value)")
+        }
+        .disposed(by: disposeBag)
+
+        subjectInt.subscribe { value in
+            print("subjectInt: \(value)")
+        }
+        .disposed(by: disposeBag)
+
+        subjectInt.subscribe { value in
+            print("subjectInt: \(value)")
+        }
+        .disposed(by: disposeBag)
     }
 
     
