@@ -26,10 +26,8 @@ class SubjectViewController: UIViewController {
     var disposeBag = DisposeBag()
     let viewModel = SubjectViewModel()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ContactCell")
         

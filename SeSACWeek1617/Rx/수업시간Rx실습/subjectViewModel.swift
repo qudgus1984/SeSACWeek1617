@@ -43,7 +43,5 @@ class SubjectViewModel {
             let result = query != "" ? contactData.filter {
                 $0.name.contains(query) } : contactData
             list.onNext(result)
-        
     }
-    
 }

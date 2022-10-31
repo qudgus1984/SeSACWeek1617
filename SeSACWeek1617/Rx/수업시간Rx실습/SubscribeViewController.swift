@@ -26,7 +26,6 @@ class SubscribeViewController: UIViewController {
     })
     
     func textDataSource() {
-        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         dataSource.titleForHeaderInSection = { dataSource, index in
@@ -41,8 +40,6 @@ class SubscribeViewController: UIViewController {
                         ])
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-        
-
     }
     
     func testRxAlamofire() {

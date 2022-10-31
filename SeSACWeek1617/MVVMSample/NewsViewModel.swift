@@ -22,7 +22,6 @@ class NewsViewModel {
 //    var sample: BehaviorSubject<[News.NewsItem]> = BehaviorSubject(value: News.items)
     var sample = BehaviorRelay(value: News.items)
 
-
     func changePageNumberFormat(text: String) {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
