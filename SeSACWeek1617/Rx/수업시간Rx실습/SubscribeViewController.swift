@@ -9,13 +9,41 @@ import UIKit
 import RxCocoa
 import RxSwift
 import RxAlamofire
+import RxDataSources
 
 class SubscribeViewController: UIViewController {
     
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var label: UILabel!
     
+    @IBOutlet weak var tableView: UITableView!
     let disposeBag = DisposeBag()
+    
+    lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Int>> (configureCell: { dataSource, tableView, indexPath, item in
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        cell.textLabel?.text = "\(item)"
+        return cell
+    })
+    
+    func textDataSource() {
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        dataSource.titleForHeaderInSection = { dataSource, index in
+            return dataSource.sectionModels[index].model
+        }
+        
+        Observable.just([
+            SectionModel(model: "title1", items: [1, 2, 3]),
+            SectionModel(model: "title2", items: [1, 2, 3]),
+            SectionModel(model: "title3", items: [1, 2, 3])
+             
+                        ])
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
+
+    }
     
     func testRxAlamofire() {
         //Success Error => <Single>
@@ -36,7 +64,7 @@ class SubscribeViewController: UIViewController {
         
         
         testRxAlamofire()
-        
+        textDataSource()
         
         
         

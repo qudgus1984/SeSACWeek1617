@@ -23,6 +23,7 @@ class RxCocoaExampleViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     
+    
     var nickname = Observable.just("Jack")
     
     override func viewDidLoad() {
